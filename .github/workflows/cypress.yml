@@ -25,14 +25,3 @@ jobs:
       - name: Run Cypress tests
         run: npm run test
 
-      - name: Merge Mochawesome reports
-        run: npm run merge
-
-      - name: Generate HTML report
-        run: npm run generate
-
-      - name: Upload Mochawesome report
-        uses: actions/upload-artifact@v4
-        with:
-          name: mochawesome-report
-          path: cypress/reports/final
